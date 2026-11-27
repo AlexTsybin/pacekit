@@ -1,0 +1,74 @@
+public final class io/github/alextsybin/pacekit/PaceCalculator {
+	public static final field INSTANCE Lio/github/alextsybin/pacekit/PaceCalculator;
+	public final fun calculateFinishTime-MmFbU3w (DD)J
+	public final fun calculateFinishTime-TN4qydI (DDJ)J
+	public final fun calculatePace-02mifH8 (DJ)D
+	public final fun calculateSpeed-jMrr0AQ (DJ)D
+}
+
+public final class io/github/alextsybin/pacekit/model/Distance {
+	public static final field Companion Lio/github/alextsybin/pacekit/model/Distance$Companion;
+	public static final synthetic fun box-impl (D)Lio/github/alextsybin/pacekit/model/Distance;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (DLjava/lang/Object;)Z
+	public static final fun equals-impl0 (DD)Z
+	public static final fun getKilometers-impl (D)D
+	public final fun getMeters ()D
+	public static final fun getMiles-impl (D)D
+	public fun hashCode ()I
+	public static fun hashCode-impl (D)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (D)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()D
+}
+
+public final class io/github/alextsybin/pacekit/model/Distance$Companion {
+	public final fun kilometers-kaDbRiY (D)D
+	public final fun meters-kaDbRiY (D)D
+	public final fun miles-kaDbRiY (D)D
+}
+
+public final class io/github/alextsybin/pacekit/model/Pace {
+	public static final field Companion Lio/github/alextsybin/pacekit/model/Pace$Companion;
+	public static final synthetic fun box-impl (D)Lio/github/alextsybin/pacekit/model/Pace;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (DLjava/lang/Object;)Z
+	public static final fun equals-impl0 (DD)Z
+	public static final fun getMinutesPerKilometer-impl (D)D
+	public final fun getSecondsPerKilometer ()D
+	public static final fun getSecondsPerMile-impl (D)D
+	public fun hashCode ()I
+	public static fun hashCode-impl (D)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (D)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()D
+}
+
+public final class io/github/alextsybin/pacekit/model/Pace$Companion {
+	public final fun minutesPerKilometer-fVGiKo0 (D)D
+	public final fun secondsPerKilometer-fVGiKo0 (D)D
+	public final fun secondsPerMile-fVGiKo0 (D)D
+}
+
+public final class io/github/alextsybin/pacekit/model/Speed {
+	public static final field Companion Lio/github/alextsybin/pacekit/model/Speed$Companion;
+	public static final synthetic fun box-impl (D)Lio/github/alextsybin/pacekit/model/Speed;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (DLjava/lang/Object;)Z
+	public static final fun equals-impl0 (DD)Z
+	public static final fun getKilometersPerHour-impl (D)D
+	public final fun getMetersPerSecond ()D
+	public static final fun getMilesPerHour-impl (D)D
+	public fun hashCode ()I
+	public static fun hashCode-impl (D)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (D)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()D
+}
+
+public final class io/github/alextsybin/pacekit/model/Speed$Companion {
+	public final fun kilometersPerHour-gmt2pSY (D)D
+	public final fun metersPerSecond-gmt2pSY (D)D
+	public final fun milesPerHour-gmt2pSY (D)D
+}
+

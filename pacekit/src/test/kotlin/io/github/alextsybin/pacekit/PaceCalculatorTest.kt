@@ -265,4 +265,90 @@ class PaceCalculatorTest {
             actual = duration,
         )
     }
+
+    @Test
+    fun `positive extra time is correctly calculated`() {
+
+        val distance = Distance.kilometers(10.0)
+        val pace = Pace.secondsPerKilometer(210.0)
+        val extraTime = 2.minutes
+
+        val duration = PaceCalculator.calculateFinishTime(
+            distance = distance,
+            pace = pace,
+            extraTime = extraTime
+        )
+
+        assertEquals(
+            expected = 37.minutes,
+            actual = duration
+        )
+    }
+
+    @Test
+    fun `zero extra time is correctly calculated`() {
+
+        val distance = Distance.kilometers(10.0)
+        val pace = Pace.secondsPerKilometer(210.0)
+        val extraTime = 0.seconds
+
+        val duration = PaceCalculator.calculateFinishTime(
+            distance = distance,
+            pace = pace,
+            extraTime = extraTime
+        )
+
+        assertEquals(
+            expected = 35.minutes,
+            actual = duration
+        )
+    }
+
+    @Test
+    fun `negative extra time is rejected`() {
+
+        val distance = Distance.kilometers(10.0)
+        val pace = Pace.secondsPerKilometer(210.0)
+        val extraTime = (-1).minutes
+
+        assertFailsWith<IllegalArgumentException> {
+            PaceCalculator.calculateFinishTime(
+                distance = distance,
+                pace = pace,
+                extraTime = extraTime
+            )
+        }
+    }
+
+    @Test
+    fun `positive infinite extra time is rejected`() {
+
+        val distance = Distance.kilometers(10.0)
+        val pace = Pace.secondsPerKilometer(210.0)
+        val extraTime = Duration.INFINITE
+
+        assertFailsWith<IllegalArgumentException> {
+            PaceCalculator.calculateFinishTime(
+                distance = distance,
+                pace = pace,
+                extraTime = extraTime
+            )
+        }
+    }
+
+    @Test
+    fun `negative infinite extra time is rejected`() {
+
+        val distance = Distance.kilometers(10.0)
+        val pace = Pace.secondsPerKilometer(210.0)
+        val extraTime = -Duration.INFINITE
+
+        assertFailsWith<IllegalArgumentException> {
+            PaceCalculator.calculateFinishTime(
+                distance = distance,
+                pace = pace,
+                extraTime = extraTime
+            )
+        }
+    }
 }

@@ -40,9 +40,21 @@ public object PaceCalculator {
 
     public fun calculateFinishTime(
         distance: Distance,
-        pace: Pace
+        pace: Pace,
     ): Duration {
 
         return (distance.kilometers * pace.secondsPerKilometer).seconds
+    }
+
+    public fun calculateFinishTime(
+        distance: Distance,
+        pace: Pace,
+        extraTime: Duration,
+    ): Duration {
+
+        require(extraTime.isFinite())
+        require(extraTime >= Duration.ZERO)
+
+        return calculateFinishTime(distance, pace) + extraTime
     }
 }
