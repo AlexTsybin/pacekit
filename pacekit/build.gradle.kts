@@ -6,8 +6,9 @@ plugins {
     `maven-publish`
 }
 
+val pacekitVersion = providers.gradleProperty("pacekitVersion")
 group = "io.github.alextsybin"
-version = "0.1.0"
+version = pacekitVersion.get()
 
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -31,7 +32,7 @@ kotlin {
 dokka {
     dokkaPublications.html {
         moduleName.set("PaceKit")
-        moduleVersion.set("0.1.0")
+        moduleVersion.set(pacekitVersion)
         suppressInheritedMembers.set(true)
         failOnWarning.set(true)
     }
