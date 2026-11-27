@@ -37,6 +37,8 @@ public object PaceCalculator {
      * @throws IllegalArgumentException If the distance
      * is zero, the duration is not finite or positive,
      * or the calculated pace is invalid.
+     *
+     * @sample io.github.alextsybin.pacekit.samples.calculatePaceSample
      */
     public fun calculatePace(
         distance: Distance,
@@ -66,6 +68,8 @@ public object PaceCalculator {
      * @throws IllegalArgumentException If the duration
      * is not finite or positive, or the calculated
      * speed is not finite.
+     *
+     * @sample io.github.alextsybin.pacekit.samples.calculateSpeedSample
      */
     public fun calculateSpeed(
         distance: Distance,
@@ -94,6 +98,8 @@ public object PaceCalculator {
      * @param pace The constant pace maintained
      * throughout the distance.
      * @return The estimated finish time.
+     *
+     * @sample io.github.alextsybin.pacekit.samples.calculateFinishTimeSample
      */
     public fun calculateFinishTime(
         distance: Distance,
@@ -123,6 +129,8 @@ public object PaceCalculator {
      * including additional time.
      * @throws IllegalArgumentException If [extraTime]
      * is negative or not finite.
+     *
+     * @sample io.github.alextsybin.pacekit.samples.calculateFinishTimeWithExtraTimeSample
      */
     public fun calculateFinishTime(
         distance: Distance,
