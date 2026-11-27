@@ -1,3 +1,5 @@
+import java.net.URI
+
 plugins {
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
@@ -41,6 +43,19 @@ dokka {
         reportUndocumented.set(true)
 
         samples.from("src/test/kotlin/io/github/alextsybin/pacekit/samples")
+
+        sourceLink {
+            localDirectory.set(file("src/main/kotlin"))
+
+            remoteUrl.set(
+                URI(
+                    "https://github.com/AlexTsybin/pacekit/" +
+                            "blob/main/pacekit/src/main/kotlin"
+                )
+            )
+
+            remoteLineSuffix.set("#L")
+        }
     }
 }
 
