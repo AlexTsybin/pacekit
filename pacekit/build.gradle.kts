@@ -83,10 +83,45 @@ publishing {
 
             pom {
                 name.set("PaceKit")
+
                 description.set(
                     "A type-safe Kotlin library for running pace, " +
                         "speed, and finish time calculations."
                 )
+
+                url.set("https://github.com/AlexTsybin/pacekit")
+
+                licenses {
+                    license {
+                        name.set("Apache License, Version 2.0")
+                        url.set(
+                            "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                        )
+                        distribution.set("repo")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("AlexTsybin")
+                        name.set("Alex Tsybin")
+                        url.set("https://github.com/AlexTsybin")
+                    }
+                }
+
+                scm {
+                    url.set(
+                        "https://github.com/AlexTsybin/pacekit"
+                    )
+
+                    connection.set(
+                        "scm:git:https://github.com/AlexTsybin/pacekit.git"
+                    )
+
+                    developerConnection.set(
+                        "scm:git:ssh://git@github.com/AlexTsybin/pacekit.git"
+                    )
+                }
             }
         }
     }
