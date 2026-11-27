@@ -4,6 +4,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Kotlin/JVM](https://img.shields.io/badge/Kotlin-JVM-7F52FF)](https://kotlinlang.org/)
 
+
 PaceKit is a lightweight, type-safe Kotlin/JVM library for running pace, speed, distance conversions, and estimated finish time calculations.
 
 Designed for Android and other Kotlin/JVM applications, it uses Kotlin value classes and `kotlin.time.Duration` to make calculations explicit and reduce unit-related mistakes. The library itself does not depend on the Android SDK or third-party runtime libraries beyond the Kotlin standard library.
