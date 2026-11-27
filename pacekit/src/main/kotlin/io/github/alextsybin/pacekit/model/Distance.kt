@@ -4,8 +4,8 @@ import io.github.alextsybin.pacekit.internal.METERS_PER_KILOMETER
 import io.github.alextsybin.pacekit.internal.METERS_PER_MILE
 
 @JvmInline
-value class Distance private constructor(
-    val meters: Double
+public value class Distance private constructor(
+    public val meters: Double
 ) {
 
     init {
@@ -13,18 +13,18 @@ value class Distance private constructor(
         require(meters >= 0)
     }
 
-    val kilometers: Double
+    public val kilometers: Double
         get() = meters / METERS_PER_KILOMETER
 
-    val miles: Double
+    public val miles: Double
         get() = meters / METERS_PER_MILE
 
-    companion object {
+    public companion object {
 
-        fun meters(value: Double): Distance = Distance(value)
+        public fun meters(value: Double): Distance = Distance(value)
 
-        fun kilometers(value: Double): Distance = Distance(value * METERS_PER_KILOMETER)
+        public fun kilometers(value: Double): Distance = Distance(value * METERS_PER_KILOMETER)
 
-        fun miles(value: Double): Distance = Distance(value * METERS_PER_MILE)
+        public fun miles(value: Double): Distance = Distance(value * METERS_PER_MILE)
     }
 }

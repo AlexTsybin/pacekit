@@ -7,9 +7,9 @@ import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.DurationUnit
 
-object PaceCalculator {
+public object PaceCalculator {
 
-    fun calculatePace(
+    public fun calculatePace(
         distance: Distance,
         duration: Duration
     ): Pace {
@@ -24,7 +24,7 @@ object PaceCalculator {
         )
     }
 
-    fun calculateSpeed(
+    public fun calculateSpeed(
         distance: Distance,
         duration: Duration
     ): Speed {
@@ -38,7 +38,7 @@ object PaceCalculator {
         )
     }
 
-    fun calculateFinishTime(
+    public fun calculateFinishTime(
         distance: Distance,
         pace: Pace
     ): Duration {
